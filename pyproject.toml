@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "forbidden_fruit"
+version = "0.1.0"
+description = "A Community-Driven Malware Development Environment: where cybersecurity experts and analysts can learn more about current threats and how to both defend and infiltrate systems ethically"
+authors = ["AmerikanischerAdler", "selforg-level"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
