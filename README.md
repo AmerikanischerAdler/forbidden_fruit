@@ -10,8 +10,25 @@ Open Terminal and Clone Repository:
 git clone https://github.com/AmerikanischerAdler/forbidden_fruit
 ```
 
+Cd in project:
+
+```bash
+cd forbidden_fruit
+```
+
+Install dependencies:
+
+```bash
+poetry install
+```
+
 ## Usage
-In Progress
+
+Run server:
+
+```bash
+poetry run flask --app forbidden_fruit/main.py run
+```
 
 ## Inspiration
 In Progress
