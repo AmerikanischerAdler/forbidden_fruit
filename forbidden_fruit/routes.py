@@ -5,5 +5,6 @@ from flask import render_template
 def home():
     return render_template("index.html")
 
-@app.route("/labs"):
+@app.route("/labs")
+def labs():
     return render_template("labs.html")
