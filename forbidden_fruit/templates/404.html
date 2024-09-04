@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block style %}{{ url_for('static', filename='404.css') }}{% endblock %}
+
+{% block content %}
+<!-- Copied from DevPosts: https://codepen.io/ZonFire99/pen/EaYmGV -->
+<div class="error">
+
+<div class="wrap">
+  <div class="404">
+    <pre><code>
+      <span class="green">&lt;!</span><span>DOCTYPE html</span><span class="green">&gt;</span>
+      <span class="orange">&lt;html&gt;</span>
+      <span class="orange">&lt;style&gt;</span>
+   * {
+      <span class="green">everything</span>:<span class="blue">awesome</span>;
+}
+      <span class="orange">&lt;/style&gt;</span>
+      <span class="orange">&lt;body&gt;</span> 
+              ERROR 404!
+        PAGE NOT FOUND!
+      <span class="comment">&lt;!--The page you are looking for 
+          is not where you think it is.--&gt;
+      </span>
+      <span class="orange"></span> 
+      <br />
+      <span class="info">
+      <br />
+      <span class="orange">&nbsp;&lt;/body&gt;</span>
+      <span class="orange">&lt;/html&gt;</span>
+    </code></pre>
+  </div>
+</div>
+
+
+</span>
+{% endblock %}

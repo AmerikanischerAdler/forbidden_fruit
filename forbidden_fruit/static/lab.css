@@ -1,0 +1,16 @@
+header nav {
+    background-color: #fff;
+}
+
+header nav div a svg {
+    color: #000;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: Rubik\ Glitch;
+    color: #000;
+    text-align: center;
+    margin-top: 100px;
+}
+

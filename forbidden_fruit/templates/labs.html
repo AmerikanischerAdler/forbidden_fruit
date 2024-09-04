@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% block subtitle %} | Labs{% endblock %}
-{% block head %}
-{{ super() }}
-<link rel="stylesheet" href="{{ url_for('static', filename='lab.css') }}">
-{% endblock %}
+{% block style %}{{ url_for('static', filename='lab.css') }}{% endblock %}
+
 {% block content %}
-<h1>Malware Development Lab</h1>
+
+<div class="contain-all">
+    <div class="title">
+        <h1>Malware Development Lab</h1>
+    </div>
+</div>
 {% endblock %}

@@ -1,11 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forbidden Fruit{% block subtitle %}{% endblock %}</title>
-    {% endblock %}
+    <link rel="stylesheet" href="{% block style %}{% endblock %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono One:wght@400&display=swap');
+        
+        *{
+            font-family: Rubik;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+ 
+        header nav {
+            height: 5vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: fixed;
+            margin-top: 0;
+        }
+        
+        header nav div:not(.logo-contain) {
+            margin-top: 7px;
+        }
+        
+        header nav .logo-contain {
+            height: 100%;
+            width: 20vw;
+        }
+        
+        header nav div a:not(#logo) {
+            height: 100%;
+            width: auto;
+            text-decoration: none;
+        }
+        
+        header nav #logo {
+            height: 100%;
+            width: auto;
+            overflow: hidden;
+        }
+        
+        header nav #logo:hover {
+            cursor: pointer;
+        }
+        
+        header nav #logo img {
+            height: 150%;
+            width: auto;
+            margin-top: -10px;
+        }
+        
+        header nav div a svg {
+            height: 75%;
+            width: auto;
+        }
+        
+        header nav div a svg:hover {
+            cursor: pointer;
+        }
+        
+        .search-contain {
+            height: 100%;
+            width: 45vw;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .search-contain input {
+            height: 75%;
+            width: 75%;
+            margin-left: -100px;
+            overflow: hidden;
+            border: 0.5px solid #000;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .search-contain input:focus {
+            /* Change color to purple */
+            border: 3px solid #9D0000;
+        }
+        
+        .search-contain svg {
+            width: auto;
+            height: 80%;
+        }
+        
+        .icon-contain {
+            height: 100%;
+            width: 20vw;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .icon-contain a #bars {
+            height: 80%;
+        }
+    </style>
 </head>
-  <body>{% block content %}{% endblock %}</body>
+  <body>
+    <header>
+      <nav>
+        <div class="logo-contain">
+          <a href="home" id="logo"><img src="{{ url_for('static', filename='images/ff_logo.png') }}"></a>
+        </div>
+        <div class="search-contain">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+          <input type="text" placeholder="Discover Malware...">
+        </div>
+        <div class="icon-contain">
+          <!-- Htmx is waiting -->
+          <a href="home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg></a>
+          <a href="labs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M288 0H160 128C110.3 0 96 14.3 96 32s14.3 32 32 32V196.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6C0 480.9 31.1 512 69.4 512H378.6c38.3 0 69.4-31.1 69.4-69.4c0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7 0 32-14.3 32-32s-14.3-32-32-32H288zM192 196.8V64h64V196.8c0 23.7 6.6 46.9 19 67.1L309.5 320h-171L173 263.9c12.4-20.2 19-43.4 19-67.1z"/></svg></a>
+          <a><svg id="bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></a>
+        </div>
+      </nav>
+    </header>
+      {% block content %}{% endblock %}
+  </body>
 </html>

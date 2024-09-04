@@ -1,26 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono One:wght@400&display=swap');
-
-*{
-    font-family: Rubik;
+header nav {
+    background-color: #fff;
 }
 
-.title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    font-size: 150px;
-    font-family: Rubik\ Glitch;
+header nav div a svg {
     color: #000;
 }
 
 .write-contain {
     display: flex;
+}
+        
+h1 {
+    font-size: 150px;
+    font-family: Rubik\ Glitch;
+    color: #000;
 }
 
 h3 {
@@ -45,85 +38,4 @@ h3 span {
     opacity: 0.05;
   }
 }
-
-header nav {
-    height: 5vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: fixed;
-    background-color: #fff;
-}
-
-header nav div:not(.logo-contain) {
-    margin-top: 7px;
-}
-
-header nav .logo-contain {
-    height: 100%;
-    width: 20vw;
-}
-
-header nav div a:not(#logo) {
-    height: 100%;
-    width: auto;
-    text-decoration: none;
-}
-
-header nav #logo {
-    height: 100%;
-    width: auto;
-    overflow: hidden;
-}
-
-header nav #logo:hover {
-    cursor: pointer;
-}
-
-header nav #logo img {
-    height: 150%;
-    width: auto;
-    margin-top: -10px;
-}
-
-header nav div a svg {
-    color: #000;
-    height: 75%;
-    width: auto;
-}
-
-header nav div a svg:hover {
-    cursor: pointer;
-}
-
-.search-contain {
-    height: 100%;
-    width: 45vw;
-    display: flex;
-    justify-content: space-around;
-}
-
-.search-contain input {
-    height: 75%;
-    width: 75%;
-    margin-left: -100px;
-}
-
-.search-contain svg {
-    width: auto;
-    height: 80%;
-}
-
-.icon-contain {
-    height: 100%;
-    width: 20vw;
-    display: flex;
-    justify-content: space-around;
-}
-
-.icon-contain a #bars {
-    height: 80%;
-}
-
-
+ 
