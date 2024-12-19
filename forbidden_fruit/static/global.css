@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono One:wght@400&display=swap');
+
+:root {
+    --main-clr: #9D0000;
+    --sec-clr: #351431;
+    --neutral-clr: #F1FAEE;
+    --opt1-clr: #A8DADC;
+    --opt2-clr: #457B9D;
+}
+
+*{
+    font-family: Rubik;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    margin-top: 0;
+}
+
+header nav div:not(.logo-contain) {
+    margin-top: 7px;
+}
+
+header nav .logo-contain {
+    height: 100%;
+    width: 20vw;
+}
+
+header nav div a:not(#logo) {
+    height: 100%;
+    width: auto;
+    text-decoration: none;
+}
+
+header nav #logo {
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+}
+
+header nav #logo:hover {
+    cursor: pointer;
+}
+
+header nav #logo img {
+    height: 150%;
+    width: auto;
+    margin-top: -10px;
+}
+
+header nav div a svg {
+    height: 75%;
+    width: auto;
+}
+
+header nav div a svg:hover {
+    cursor: pointer;
+}
+
+.search-contain {
+    height: 100%;
+    width: 45vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.search-contain input {
+    height: 75%;
+    width: 75%;
+    margin-left: -100px;
+    overflow: hidden;
+    border: 0.5px solid #000;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-contain input:focus {
+    /* Change color to purple */
+    border: 3px solid var(--main-clr);
+}
+
+.search-contain svg {
+    width: auto;
+    height: 80%;
+}
+
+.icon-contain {
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-contain a #bars {
+    height: 80%;
+}
+
